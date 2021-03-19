@@ -9,8 +9,6 @@ import time
 
 from datetime import datetime
 
-PATH = r"C:\Users\chiay\Downloads\Compressed\chromedriver_win32_2/chromedriver.exe"
-
 username_1 = "TP050735"
 password_1 = "TP050735"
 username_2 = "TP051139"
@@ -20,7 +18,7 @@ code = input("Enter the current OTP Code: ")
 
 def driver1():
 
-    driver = webdriver.Chrome(PATH)
+    driver = webdriver.Chrome(executable_path="/usr/lib/chromium-browser/chromedriver")
     
     driver.get("https://apspace.apu.edu.my/tabs/dashboard")
            
@@ -75,7 +73,7 @@ def driver1():
 
 def driver2():
 
-    driver = webdriver.Chrome(PATH)
+    driver = webdriver.Chrome(executable_path="/usr/lib/chromium-browser/chromedriver")
     
     driver.get("https://apspace.apu.edu.my/tabs/dashboard")
            
@@ -128,16 +126,5 @@ def driver2():
     
     driver.quit()
 
-
 driver1()
 driver2()
-
-
-
-
-
-
-
-
-
-
