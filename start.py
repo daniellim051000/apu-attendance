@@ -11,19 +11,10 @@ import time
 
 from datetime import datetime
 
-#PATH = r"C:\Users\chiay\Downloads\Compressed\chromedriver_win32_2/chromedriver.exe"
-
-username_1 = "TP050735"
-password_1 = "TP050735"
-username_2 = "TP051139"
-password_2 = "Nagalsw030300?"
-
-
-	
 def getOTPCode():
     # Creating the driver (browser)
     #PATH = r"C:\Users\chiay\Downloads\Compressed\chromedriver_win32_2/chromedriver.exe"
-    driver = webdriver.Chrome(executable_path="C:/Users/Wei Cong/Downloads/chromedriver_win32/chromedriver.exe")
+    driver = webdriver.Chrome(executable_path="/usr/lib/chromium-browser/chromedriver")
     driver.maximize_window()
 
     # Login
@@ -32,7 +23,6 @@ def getOTPCode():
     login_page = LoginPage(driver)
     login_page.load()
     time.sleep(7)
-
 
     selected_group = driver.find_element_by_xpath("//span[@title='"+"Take attendance lo😂😂"+"']")
     selected_group.click()
@@ -46,7 +36,7 @@ def getOTPCode():
 
 def driver(username,password,otpCode):
 
-    driver = webdriver.Chrome(executable_path="C:/Users/Wei Cong/Downloads/chromedriver_win32/chromedriver.exe")
+    driver = webdriver.Chrome(executable_path="/usr/lib/chromium-browser/chromedriver")
     
     driver.get("https://apspace.apu.edu.my/tabs/dashboard")
            
@@ -66,19 +56,15 @@ def driver(username,password,otpCode):
     login_button = driver.find_element_by_xpath("/html/body/app-root/ion-app/ion-router-outlet/app-login/ion-content/div/section[2]/div/ion-grid/ion-row[2]/ion-col[1]/form/div/div[3]/ion-button")
     
     login_button.click()
-    
-    
+
     #driver.implicitly_wait(5)
     driver.implicitly_wait(10)
-    
-    
+        
     ##### read username , tp , course
     
     name = driver.find_element_by_xpath("/html/body/app-root/ion-app/ion-router-outlet/app-tabs/ion-content/ion-tabs/div[1]/ion-router-outlet/app-dashboard/ion-content/div/ion-grid/ion-row/ion-col[1]/ion-card[2]/ion-card-header/ion-card-title")
     # tp_number = driver.find_element_by_xpath("/html/body/app-root/ion-app/ion-router-outlet/app-tabs/ion-content/ion-tabs/div[1]/ion-router-outlet/app-dashboard/ion-content/div/ion-grid/ion-row/ion-col[1]/ion-card[2]/ion-card-header/ion-card-subtitle")
-    
-    
-    
+
     attendance_page = driver.find_element_by_xpath("/html/body/app-root/ion-app/ion-router-outlet/app-tabs/ion-content/ion-tabs/div[1]/ion-router-outlet/app-dashboard/ion-content/div/ion-grid/ion-row/ion-col[1]/ion-card[3]/ion-card-content/ion-grid/ion-row/ion-col[1]/ion-button")
     
     attendance_page.click()
@@ -103,7 +89,8 @@ def driver(username,password,otpCode):
     
     #driver.quit()
 
-students= [["TP050735","TP050735"],["TP051139","Nagalsw030300?"],["TP050843","Apspaceid-123"]]
+#Put ur ID and Password here
+students= [["####","####"],["####","####?"]]
 
 otpCode= getOTPCode()
 
@@ -112,13 +99,3 @@ if len(otpCode)==3:
         driver(x[0],x[1],otpCode)
 else:
     print("invalid otp code")
-
-
-
-
-
-
-
-
-
-
