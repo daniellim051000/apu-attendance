@@ -43,6 +43,7 @@ def getOTPCode():
     arr=str.splitlines()
     driver.quit()
     #print(arr[len(arr)-3])
+
     return arr[len(arr)-3]
 
 def driver(username,password,otpCode):
@@ -95,6 +96,7 @@ def driver(username,password,otpCode):
     now = datetime.now()
     current_time = now.strftime("%Y-%m-%d %H:%M:%S")
     
+
     string="Time =>" + current_time +" || " +"Name =>"+ name.text +" || " +"Message =>" + message +"\n"
     driver.quit()
     return string
@@ -104,6 +106,7 @@ def driver(username,password,otpCode):
     # print("Message :", message)
     
     #driver.quit()
+
 
 def sendValidationToWhatsApp(returnMsg):
     options = Options()
@@ -128,9 +131,9 @@ def sendValidationToWhatsApp(returnMsg):
     time.sleep(10)
 
 #Put ur ID and Password here
-# students= [["TP050735","TP050735"]]
-students= [["TP050735","TP050735"],["TP051139","Nagalsw030300?"],["TP050843","Apspaceid-123"]]
+students= [["TP00000","TP00000"],["TP000000","Nagalsxxxxx?"],["TP011111","rwrwrrwr"]]
 returnMsg=''
+
 
 otpCode= getOTPCode()
 
