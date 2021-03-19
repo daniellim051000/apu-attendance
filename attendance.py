@@ -66,7 +66,7 @@ def driver1():
     
     print("Time :", current_time)
     print("Name :", name.text)
-    print("Username :", username_2)
+    print("Username :", username_1)
     print("Message :", message)
     
     #driver.quit()
@@ -121,7 +121,7 @@ def driver2():
     
     print("Time :", current_time)
     print("Name :", name.text)
-    print("Username :", username_1)
+    print("Username :", username_2)
     print("Message :", message)
     
     driver.quit()
