@@ -9,10 +9,10 @@ import time
 
 from datetime import datetime
 
-username_1 = "TP050735"
-password_1 = "TP050735"
-username_2 = "TP051139"
-password_2 = "Nagalsw030300?"
+username_1 = "TP051131"
+password_1 = "C2rsd000D987!"
+username_2 = "TP050848"
+password_2 = "JAS__0303mine"
 
 code = input("Enter the current OTP Code: ")
 
@@ -66,7 +66,7 @@ def driver1():
     
     print("Time :", current_time)
     print("Name :", name.text)
-    print("Username :", username_1)
+    print("Username :", username_2)
     print("Message :", message)
     
     #driver.quit()
