@@ -31,7 +31,6 @@ def getOTPCode():
 
     str = last_message
     arr=str.splitlines()
-    #print(arr[len(arr)-3])
     return arr[len(arr)-3]
 
 def driver(username,password,otpCode):
@@ -86,11 +85,10 @@ def driver(username,password,otpCode):
     print("Name :", name.text)
     print("Username :", username)
     print("Message :", message)
-    
-    #driver.quit()
+
 
 #Put ur ID and Password here
-students= [["####","####"],["####","####?"]]
+students= [["TP051131","C2rsd000D987"],["TP050848","JAS__0303mine"]]
 
 otpCode= getOTPCode()
 
