@@ -9,6 +9,7 @@ from selenium.webdriver.chrome.options import Options
 from simon.accounts.pages import LoginPage
 
 import time
+#fuk you cibai
 
 from datetime import datetime
 
