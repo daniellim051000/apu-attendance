@@ -9,7 +9,7 @@ from selenium.webdriver.chrome.options import Options
 from simon.accounts.pages import LoginPage
 
 import time
-##me and xiang yik was here
+#fuk you cibai
 
 from datetime import datetime
 
